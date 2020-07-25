@@ -31,8 +31,8 @@
 
                 <tr>
                 <td><?php echo $categoria ?></td>
-                <td style="text-align:right"><a class="btn btn-warning btn-sm" href="editar_categoria.php?id=<?php echo $id_estoque ?>" role="button"><i class="far fa-edit"></i>&nbsp;Editar</a>
-                    <a class="btn btn-danger btn-sm" href="deletar_categoria.php?id=<?php echo $id_estoque ?>" role="button"><i class="far fa-trash-alt"></i>&nbsp;Excluir</a>
+                <td style="text-align:right"><a class="btn btn-warning btn-sm" href="editar_categoria.php?id=<?php echo $id_categoria ?>" role="button"><i class="far fa-edit"></i>&nbsp;Editar</a>
+                    <a class="btn btn-danger btn-sm" href="deletar_categoria.php?id=<?php echo $id_categoria ?>" role="button"><i class="far fa-trash-alt"></i>&nbsp;Excluir</a>
 </td>
                 </tr>
                     <?php } ?>
