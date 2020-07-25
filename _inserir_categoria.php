@@ -4,7 +4,7 @@
 
     $categoria = $_POST['categoria'];
 
-    $sql = "INSERT INTO `categoria`(`categoria`) VALUES ('$categoria')";
+    $sql = "INSERT INTO `categoria`(`nome_categoria`) VALUES ('$categoria')";
 
     $inserir = mysqli_query($conexao, $sql);
     

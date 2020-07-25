@@ -9,6 +9,9 @@
 </head>
 <body>
     <div class="container" style="width:400px; margin-top:50px">
+    <div style="text-align:right; margin-bottom: 20px">
+    <a href="index.php" class="btn btn-sm btn-secondary">Voltar para o menu</a>
+    </div>
     <div style="text-align:center; margin-bottom:20px">
     <h3>Categorias</h3>
     </div>
