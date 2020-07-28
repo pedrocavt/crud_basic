@@ -25,7 +25,7 @@
    ?>
 
     <div style="text-align:right; margin-bottom:10px;">
-        <a href="index.php" class="btn btn-sm btn-secondary" >Voltar para o menu</a>    
+        <a href="menu.php" class="btn btn-sm btn-secondary" >Voltar para o menu</a>    
     </div>
     <h3>Editar uma categoria</h3>
   <div class="form-group">

@@ -24,9 +24,9 @@ $inserir = mysqli_query($conexao, $sql);
 	<div style="padding-top: 20px;">
 
 
-		<a href="index.php" class="btn btn-sm btn-secondary">Voltar para o menu</a>
+		<a href="menu.php" class="btn btn-sm btn-secondary">Voltar para o menu</a>
 
-		<a href="index.php" role="button" class="btn btn-sm btn-primary" style="float:right">Cadastrar novo item</a>
+		<a href="adicionar_prodotu.php" role="button" class="btn btn-sm btn-primary" style="float:right">Cadastrar novo item</a>
 
 	</div>
 

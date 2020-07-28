@@ -29,6 +29,9 @@
     </form>
 </div>
 
+<center style="margin-top:10px">
+    <p>Você não possui cadastro? Clique<a href="cadastro_usuario_externo.php"> aqui</a></p>
+</center>
 
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

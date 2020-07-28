@@ -10,12 +10,12 @@
 
     <div class="container" style="width:400px; margin-top:50px">
     <div style="text-align:right">
-    <a href="menu.php" class="btn btn-sm btn-secondary">Voltar</a>
+         <a href="index.php" class="btn btn-sm btn-secondary">Voltar</a>
     </div>
          <center>
             <h4>Cadastro de usuário</h4>
         </center>
-        <form action="_insert_usuario.php" method="POST">
+        <form action="_insert_usuario_externo.php" method="POST">
             <div class="form-group">
                 <label>Nome do Usuário:</label>
                 <input type="text" name="nomeUsuario" class="form-control" required autocomplete="off" placeholder="Seu nome">
@@ -33,16 +33,7 @@
                 <input type="password" name="senhaUsuario2" class="form-control" required autocomplete="off" placeholder="Repita a senha" oninput="validaSenha(this)">
                 <small>Precisa ser igual a senha digitada acima.</small>
             </div>
-            <div class="form-group">
-                <label>Nível de acesso</label>
-                <select name="nivelUsuario" class="form-control">
-
-                    <option value="1">Adminstrador</option>
-                    <option value="2">Funcionário</option>
-                    <option value="3">Conferente</option>
-
-                </select>
-            </div>
+            
             <div style="text-align:right">
             <button type="submit" class="btn btn-sm btn-success">Cadastrar</button>
             </div>

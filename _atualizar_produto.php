@@ -2,7 +2,6 @@
     include 'conexao.php';
 
     $id = $_POST['id'];
-    // $nroProduto = $_POST['nroProduto'];
     $nameProduto = $_POST['nameProduto'];
     $categoria = $_POST['categoria'];
     $quantidade = $_POST['quantidade'];

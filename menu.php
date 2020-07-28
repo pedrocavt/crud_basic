@@ -8,58 +8,82 @@
 </head>
 <body>
     
-    <div class="container" style="margin-top:100px">
+  <div class="container" style="margin-top:50px">
     
     <div class="row">
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Adicionar Produto</h5>
-        <p class="card-text">Opção para adicionar produtos em nosso estoque.</p>
-        <a href="adicionar_produto.php" class="btn btn-primary">Cadastrar Produto</a>
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Adicionar Produto</h5>
+            <p class="card-text">Opção para adicionar produtos em nosso estoque.</p>
+            <a href="adicionar_produto.php" class="btn btn-primary">Cadastrar Produto</a>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Lista de Produto</h5>
-        <p class="card-text">Visualizar, editar e excluir os produtos.</p>
-        <a href="listar_produtos.php" class="btn btn-primary">Produtos</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-    </div>
-
-    <div class="container" style="margin-top:30px">
-    
-    <div class="row">
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Adicionar Categoria</h5>
-        <p class="card-text">Opção para adicionar categoria de produtos.</p>
-        <div>
-        <a href="adicionar_categoria.php" class="btn btn-primary">Cadastrar categoria</a>
-        <a href="listar_categoria.php" class="btn btn-secondary" style="float:right">Editar categoria</a>
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Lista de Produto</h5>
+            <p class="card-text">Visualizar, editar e excluir os produtos.</p>
+            <a href="listar_produtos.php" class="btn btn-primary">Produtos</a>
+          </div>
         </div>
       </div>
     </div>
+
   </div>
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Adicionar fornecedor</h5>
-        <p class="card-text">Opção para adicionar fornecedores.</p>
-        <a href="adicionar_fornecedor.php" class="btn btn-primary">Cadastrar fornecedor</a>
+
+  <div class="container" style="margin-top:30px">
+    
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Adicionar Categoria</h5>
+            <p class="card-text">Opção para adicionar categoria de produtos.</p>
+            <div>
+            <a href="adicionar_categoria.php" class="btn btn-primary">Cadastrar categoria</a>
+            <a href="listar_categoria.php" class="btn btn-secondary" style="float:right">Editar categoria</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Adicionar fornecedor</h5>
+            <p class="card-text">Opção para adicionar fornecedores.</p>
+            <a href="adicionar_fornecedor.php" class="btn btn-primary">Cadastrar fornecedor</a>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
+  </div>
+
+  <div class="container" style="margin-top:30px">
+    
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Usuário</h5>
+            <p class="card-text">Aprovação e lista de usuaris cadastrados.</p>
+            <div>
+            <a href="aprovar_usuario.php" class="btn btn-primary" >Aprovar</a>
+            <a style="float:right" href="listar_usuario.php" class="btn btn-secondary" >Lista de usuários</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
     </div>
+
+  </div>
+
+   
+
+ 
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

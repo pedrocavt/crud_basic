@@ -8,35 +8,45 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
 </head>
 <body>
-    <div class="container" style="width:400px; margin-top:50px">
+    <div class="container" style="width:800px; margin-top:50px">
     <div style="text-align:right; margin-bottom: 20px">
     <a href="menu.php" class="btn btn-sm btn-secondary">Voltar para o menu</a>
     </div>
     <div style="text-align:center; margin-bottom:20px">
-    <h3>Categorias</h3>
+    <h3>Lista de Usuarios</h3>
     </div>
         <table class="table">
             <thead>
-              
+                <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">E-mail</th>
+                    <th scope="col">Nivel</th>
+                    <th scope="col">Ação</th>
+                </tr>
             </thead>
             <tbody>
             <?php 
                 include 'conexao.php';
-                $sql = "SELECT * FROM `categoria`";
+                $sql = "SELECT * FROM `usuarios` WHERE status = 'Ativo'";
                 $buscar = mysqli_query($conexao, $sql);
 
                 while($array = mysqli_fetch_array($buscar)){
-                    $id_categoria = $array['id_categoria'];
-                    $categoria = $array['nome_categoria'];
+                    $idUsuario =  $array['idUsuario'];
+                    $nomeUsuario = $array['nomeUsuario'];
+                    $emailUsuario = $array['emailUsuario'];
+                    $nivelUsuario= $array['nivelUsuario'];
+                    
                 ?>
                     
             
 
                 <tr>
-                <td><?php echo $categoria ?></td>
-                <td style="text-align:right"><a class="btn btn-warning btn-sm" href="editar_categoria.php?id=<?php echo $id_categoria ?>" role="button"><i class="far fa-edit"></i>&nbsp;Editar</a>
-                    <a class="btn btn-danger btn-sm" href="deletar_categoria.php?id=<?php echo $id_categoria ?>" role="button"><i class="far fa-trash-alt"></i>&nbsp;Excluir</a>
-</td>
+                <td><?php echo $nomeUsuario ?></td>
+                <td><?php echo $emailUsuario ?></td>
+                <td><?php echo $nivelUsuario ?></td>
+                <td><a class="btn btn-success btn-sm" href="editar_usuario.php?id=<?php echo $idUsuario ?>" role="button"><i class="far fa-edit"></i>&nbsp;Editar</a>
+                    <a class="btn btn-danger btn-sm" href="_deletar_usuario_aprov.php?id=<?php echo $idUsuario ?>" role="button"><i class="far fa-trash-alt"></i>&nbsp;Excluir</a>
+                </td>
                 </tr>
                     <?php } ?>
             </tbody>

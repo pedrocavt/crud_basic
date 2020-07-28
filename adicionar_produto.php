@@ -73,7 +73,7 @@
 			</div>
 			<div>
 			<div>
-			<a href="index.php" class="btn btn-sm btn-secondary">Voltar</a>
+			<a href="menu.php" class="btn btn-sm btn-secondary">Voltar</a>
 			<button type="submit" id="button" class="btn btn-sm" style="float:right">Cadastrar</button>
 			</div>
 		</form>

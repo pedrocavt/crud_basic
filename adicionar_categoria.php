@@ -9,7 +9,7 @@
 <body>
 <form method="POST" action="_inserir_categoria.php" class="container" style="width:500px; margin-top:50px">
     <div style="text-align:right; margin-bottom:10px;">
-        <a href="index.php" class="btn btn-sm btn-secondary" >Voltar para o menu</a>    
+        <a href="menu.php" class="btn btn-sm btn-secondary" >Voltar para o menu</a>    
     </div>
     <h3>Cadastrar uma categoria</h3>
   <div class="form-group">

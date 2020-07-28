@@ -52,7 +52,7 @@
                              <?php } ?>
             </tbody>
         </table>
-        <a href="index.php" class="btn btn-sm btn-secondary">Voltar para o menu</a>
+        <a href="menu.php" class="btn btn-sm btn-secondary">Voltar para o menu</a>
 
 
     </div>
