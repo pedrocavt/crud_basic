@@ -7,10 +7,37 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
 <body>
-    
-  <div class="container" style="margin-top:50px">
-    
+<?php 
+
+session_start();
+
+$usuario = $_SESSION['usuario'];
+
+if(!isset($_SESSION['usuario'])){
+  header("location: index.php");
+};
+
+include 'conexao.php';
+
+$sql = "SELECT `nivelUsuario` FROM `usuarios` WHERE emailUsuario = '$usuario'";
+$buscar = mysqli_query($conexao, $sql);
+$array = mysqli_fetch_array($buscar);
+$nivel = $array['nivelUsuario'];
+
+?>    
+
+  <div class="container" style="margin-top:10px">
+
+    <div style="text-align:right; margin-bottom:20px">
+      <a href="index.php" class="btn btn-danger">Sair</a>  
+    </div>
+
     <div class="row">
+<?php 
+if (($nivel == 1) || ($nivel == 2)){
+
+?>
+
       <div class="col-sm-6">
         <div class="card">
           <div class="card-body">
@@ -20,6 +47,7 @@
           </div>
         </div>
       </div>
+<?php } ?>
       <div class="col-sm-6">
         <div class="card">
           <div class="card-body">
@@ -67,11 +95,18 @@
       <div class="col-sm-6">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Usuário</h5>
-            <p class="card-text">Aprovação e lista de usuaris cadastrados.</p>
-            <div>
-            <a href="aprovar_usuario.php" class="btn btn-primary" >Aprovar</a>
-            <a style="float:right" href="listar_usuario.php" class="btn btn-secondary" >Lista de usuários</a>
+            <h5 class="card-title">Usuários</h5>
+            <p class="card-text">Aprovação, lista de usuários e cadastradar.</p>
+            <div style="display:grid; grid-template-columns: 1fr 1fr 1fr;">
+              <div>
+                <a href="aprovar_usuario.php" class="btn btn-primary" >Aprovar</a>
+              </div>
+              <div style="text-align:center">
+                <a href="listar_usuario.php" class="btn btn-secondary" >Lista de usuários</a>
+              </div>
+              <div style="text-align:right">
+                <a href="cadastro_usuario.php" class="btn btn-primary">Cadastrar</a>
+              </div>
             </div>
           </div>
         </div>

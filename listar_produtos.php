@@ -8,7 +8,23 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
 </head>
 <body>
+<?php
+session_start();
 
+$usuario = $_SESSION['usuario'];
+
+if(!isset($_SESSION['usuario'])){
+  header("location: index.php");
+};
+
+include 'conexao.php';
+
+$sql = "SELECT `nivelUsuario` FROM `usuarios` WHERE emailUsuario = '$usuario'";
+$buscar = mysqli_query($conexao, $sql);
+$array = mysqli_fetch_array($buscar);
+$nivel = $array['nivelUsuario'];
+
+?>
     <div class="container" style="margin-top:40px">
 
         <h3>Lista de Produtos</h3>
@@ -44,10 +60,18 @@
                     <td><?php echo $categoria ?></td>
                     <td><?php echo $quantidade ?></td>
                     <td><?php echo $fornecedor ?></td>
-                    <td><a class="btn btn-warning btn-sm" href="editar_produto.php?id=<?php echo $id_estoque ?>" role="button"><i class="far fa-edit"></i>&nbsp;Editar</a>
+                    <td>
+                    <?php
+                        if(($nivel == 1) ||($nivel == 2)){
+                    ?>
+                    <a class="btn btn-warning btn-sm" href="editar_produto.php?id=<?php echo $id_estoque ?>" role="button"><i class="far fa-edit"></i>&nbsp;Editar</a>
+                    <?php } ?>
+                    <?php 
+                    if($nivel ==1){
+                    ?>
                     <a class="btn btn-danger btn-sm" href="deletar_produto.php?id=<?php echo $id_estoque ?>" role="button"><i class="far fa-trash-alt"></i>&nbsp;Excluir</a>
+                    <?php } ?>
 </td>
-
                 </tr> 
                              <?php } ?>
             </tbody>

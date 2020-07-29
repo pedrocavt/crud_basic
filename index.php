@@ -14,14 +14,14 @@
     <center>
         <img src="img/cadeado.png" alt="cadeado" width="125px" height="125px">
     </center>
-    <form action="">
+    <form action="index1.php" method="POST">
         <div class="form-group">
             <label>Usuário</label>
             <input type="text" name="usuario" class="form-control" placeholder="Usuário" autocomplete="off" required>
         </div>
         <div class="form-group">
             <label>Senha</label>
-            <input type="password" name="usuario" class="form-control" placeholder="Senha" autocomplete="off" required>
+            <input type="password" name="senha" class="form-control" placeholder="Senha" autocomplete="off" required>
         </div>
         <div style="text-align:right">
         <button type="submit" class="btn btn-sm btn-success">Entrar</button>

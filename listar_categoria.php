@@ -15,9 +15,12 @@
     <div style="text-align:center; margin-bottom:20px">
     <h3>Categorias</h3>
     </div>
-        <table class="table">
+        <table class="table" style="text-align:center">
             <thead>
-              
+              <tr>
+                <th scope="col">Nome</th>
+                <th scope="col">Ação</th>
+              </tr>
             </thead>
             <tbody>
             <?php 
@@ -34,7 +37,7 @@
 
                 <tr>
                 <td><?php echo $categoria ?></td>
-                <td style="text-align:right"><a class="btn btn-warning btn-sm" href="editar_categoria.php?id=<?php echo $id_categoria ?>" role="button"><i class="far fa-edit"></i>&nbsp;Editar</a>
+                <td ><a class="btn btn-warning btn-sm" href="editar_categoria.php?id=<?php echo $id_categoria ?>" role="button"><i class="far fa-edit"></i>&nbsp;Editar</a>
                     <a class="btn btn-danger btn-sm" href="deletar_categoria.php?id=<?php echo $id_categoria ?>" role="button"><i class="far fa-trash-alt"></i>&nbsp;Excluir</a>
 </td>
                 </tr>
